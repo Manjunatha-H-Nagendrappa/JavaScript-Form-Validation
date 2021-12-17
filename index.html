@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Application Form</title>
+    <link rel="stylesheet" href="F:\1HCJavaScript-VSC\zJS-WebFormValidation\style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  </head>
+
+  <body>
+    <form name="webform" id="webform" novalidate autocomplete="off">
+      <h2><b>Web Application Form</b></h2>
+      <div class="container">
+        <div class="wrapper">
+          <div class="image">
+            <img src="" alt="">
+          </div>
+          <div class="content">
+            <div class="icon">
+              <i class="fas fa-cloud-upload-alt"></i>
+            </div>
+            <div class="text">
+              No file chosen yet!
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="field-icontrol">
+            <input class="fileInput" type="file" id="photo" onchange="previewImg()">
+            <span></span>
+          </div>
+        </div>
+      </div><br /><br />
+
+      <div class="row">
+        <div class="field-icontrol">
+          <label>Full Name</label>
+          <input type="text" id="name" placeholder="Full Name" maxlength="30" />
+          <span></span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field-icontrol">
+          <label>Date of Birth</label>
+          <input type="text" id="dob" placeholder="dd-mm-yyyy" />
+          <span></span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field-icontrol">
+          <label>E-mail</label>
+          <input type="text" id="email" placeholder="E-mail" maxlength="30" />
+          <span></span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field-icontrol">
+          <label>Phone Number</label>
+          <input type="text" id="phone" placeholder="Phone Number" maxlength="10" />
+          <span></span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field-scontrol">
+          <label>City</label>
+          <select id="city">
+            <option>-- Select --</option>
+            <option>Bangalore</option>
+            <option>Chennai</option>
+            <option>Hyderabad</option>
+            <option>Mumbai</option>
+            <option>Kolkata</option>
+          </select>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field-fcontrol">
+          <label>Gender</label>
+          <fieldset id="gender">
+            <div class="form-inline">
+              <input type="radio" name="gender" id="gender" value="Male">Male
+              <input type="radio" name="gender" id="gender" value="Female">Female
+              <input type="radio" name="gender" id="gender" value="Transgender">Transgender
+            </div>
+          </fieldset>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="row">
+        <label>Hobbies <i>(optional)</i></label>
+        <fieldset id="hobbies">
+          <div class="form-inline">
+            <input type="checkbox" name="hobbies" id="hobbies" value="Sports">Sports
+            <input type="checkbox" name="hobbies" id="hobbies" value="Music">Music
+            <input type="checkbox" name="hobbies" id="hobbies" value="Dance">Dance
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="row">
+        <div class="field-icontrol">
+          <label>Choose File</label>
+          <input type="file" id="file" />
+          <span></span>
+        </div>
+      </div>
+
+      <div class="row">
+        <input type="reset" value="Reset" />
+        <input type="submit" value="Submit" />
+      </div>
+    </form>
+
+    <script>
+      function previewImg() {
+        const img = document.querySelector( "img" );
+        const file = document.querySelector( 'input[type=file]' ).files[ 0 ];
+        const reader = new FileReader();
+
+        reader.addEventListener( "load", function () {
+          //converting image file to base64 string
+          img.src = reader.result;
+        }, false );
+
+        if ( file )
+        {
+          reader.readAsDataURL( file );
+        }
+      }
+    </script>
+    <script src="F:\1HCJavaScript-VSC\zJS-WebFormValidation\app.js"></script>
+  </body>
+
+</html>

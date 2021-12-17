@@ -1,0 +1,152 @@
+.container {
+  height: 220px;
+  width: 400px;
+  position: relative;
+}
+.container .wrapper {
+  position: relative;
+  height: 165px;
+  width: 170px;
+  border-radius: 10px;
+  background: #fff;
+  border: 2px dashed grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper .image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.wrapper .icon {
+  font-size: 100px;
+  color: rgb(247, 244, 244);
+}
+.wrapper .text {
+  font-size: 11px;
+  font-weight: 500;
+  color: black;
+  text-align: center;
+}
+.fileInput {
+  height: 100%;
+  width: 188px;
+  font-size: 12px;
+  border: none !important;
+}
+:root {
+  --show-error: red;
+  --show-success: rgb(2, 177, 247);
+}
+body {
+  background-color: rgb(121, 115, 121);
+}
+h2 {
+  text-align: center;
+  text-decoration: underline;
+  padding-bottom: 30px;
+}
+.row {
+  padding-bottom: 10px;
+}
+form {
+  width: 550px;
+  padding: 25px;
+  padding-top: 30px;
+  background: white;
+  margin: 50px auto 0;
+  border-radius: 5px;
+}
+::placeholder {
+  color: rgb(209, 202, 202);
+}
+fieldset {
+  height: 27px;
+  width: auto;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 2px;
+  padding: 7px;
+}
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: block;
+  margin-bottom: 5px;
+}
+input:focus {
+  outline: none !important;
+  border: 1px solid black;
+}
+select:focus {
+  outline: none !important;
+  border: 1px solid black;
+}
+.field-icontrol.ierror input {
+  border-color: var(--show-error);
+}
+.field-icontrol.isuccess input {
+  border-color: var(--show-success);
+}
+.field-scontrol.serror select {
+  border-color: var(--show-error);
+}
+.field-scontrol.ssuccess select {
+  border-color: var(--show-success);
+}
+.field-fcontrol.ferror fieldset {
+  border-color: var(--show-error);
+}
+.field-fcontrol.fsuccess fieldset {
+  border-color: var(--show-success);
+}
+.field-icontrol span {
+  color: var(--show-error);
+  margin-bottom: 25px;
+}
+.field-scontrol span {
+  color: var(--show-error);
+  margin-bottom: 25px;
+}
+.field-fcontrol span {
+  color: var(--show-error);
+  margin-bottom: 25px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16.5px;
+}
+label i {
+  color: rgb(132, 138, 138);
+  font-size: 16.5px;
+}
+.form-inline input,
+label {
+  display: inline-block;
+  width: auto;
+}
+input[type="submit"],
+input[type="reset"] {
+  width: 20%;
+  background-color: rgb(152, 140, 255);
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 30px;
+}
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background: rgb(116, 117, 116);
+}
