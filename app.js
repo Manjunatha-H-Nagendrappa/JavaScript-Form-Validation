@@ -272,8 +272,8 @@ form.addEventListener("submit", function (e) {
     ) {
       alert("please fill out all the form details");
     } else {
-    alert(
-      "You have been entered the following details\n" +
+      alert(
+        "You have been entered the following details\n" +
         "Photo Name = " +
         photo +
         "\n" +
@@ -300,8 +300,8 @@ form.addEventListener("submit", function (e) {
         "\n" +
         "File Name = " +
         file
-    );
-  };
+      );
+    };
   };
   getDetails();
   document.getElementById("webform").reset();
