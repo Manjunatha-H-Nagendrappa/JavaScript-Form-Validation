@@ -236,18 +236,18 @@ form.addEventListener("submit", function (e) {
   }
 
   const getDetails = () => {
-    var p = document.getElementById("photo").value;
-    var a = document.getElementById("name").value;
-    var b = document.getElementById("dob").value;
-    var c = document.getElementById("email").value;
-    var d = document.getElementById("phone").value;
-    var e = document.getElementById("city").value;
-    var h = document.getElementById("file").value;
+    var photo = document.getElementById("photo").value;
+    var name = document.getElementById("name").value;
+    var dob = document.getElementById("dob").value;
+    var email = document.getElementById("email").value;
+    var phone = document.getElementById("phone").value;
+    var city = document.getElementById("city").value;
+    var file = document.getElementById("file").value;
 
     var Gender = document.getElementsByTagName("input");
     for (i = 0; i < Gender.length; i++) {
       if (Gender[i].type === "radio" && Gender[i].checked) {
-        var f = Gender[i].value;
+        var gender = Gender[i].value;
       }
     }
 
@@ -256,39 +256,53 @@ form.addEventListener("submit", function (e) {
     for (var i = 0; i < checkboxes.length; i++) {
       if (checkboxes[i].checked) {
         Hobbies.push(checkboxes[i].value);
-        var g = Hobbies.join(", ");
+        var hobbies = Hobbies.join(", ");
       }
     }
-
+     if (
+      photo == "" ||
+      name == "" ||
+      dob == "" ||
+      email == "" ||
+      phone == "" ||
+      city == "" ||
+      file == "" ||
+      gender == "" ||
+      hobbies == ""
+    ) {
+      alert("please fill out all the form details");
+    } else {
     alert(
       "You have been entered the following details\n" +
         "Photo Name = " +
-        p +
+        photo +
         "\n" +
         "Full Name = " +
-        a +
+        name +
         "\n" +
         "Date of Birth = " +
-        b +
+        dob +
         "\n" +
         "E-mail = " +
-        c +
+        email +
         "\n" +
         "Phone Number = " +
-        d +
+        phone +
         "\n" +
         "City = " +
-        e +
+        city +
         "\n" +
         "Gender = " +
-        f +
+        gender +
         "\n" +
         "Hobbies = " +
-        g +
+        hobbies +
         "\n" +
         "File Name = " +
-        h
+        file
     );
   };
+  };
   getDetails();
+  document.getElementById("webform").reset();
 });
