@@ -1,6 +1,6 @@
 # JavaScript-Form-Validation
 
-Different types of form field validation.
+Different types of form fields validation.
 
 Programming languages used HTML, CSS and JavaScript.
 
